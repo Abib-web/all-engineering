@@ -1,0 +1,52 @@
+Options -MultiViews
+Options +FollowSymlinks
+# On autorise de renommer les pages
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# On peut enlever le .php et renommer les pages comme on le souhaite
+#RewriteRule ^([^\.]+)$ $1.php
+
+#<Files /All_engineering/admin/index.php>
+#AuthName "Dialog prompt"
+#AuthType Basic
+#AuthUserFile /All_engineering/admin/.htpasswd
+#Require valid-user
+#</Files>
+
+#RewriteRule ^forum$ /All_engineering/xcforum/forum [L]
+#RewriteRule ^forum/([0-9]+)$ /All_engineering/xcforum/sujet?id=$1 [L]
+#RewriteRule ^forum/([0-9]+)/([0-9]+)$ /All_engineering/xcforum/topic?id_forum=$1&id_topic=$2 [L]
+#RewriteRule ^forum/creer-mon-topic$ /All_engineering/xcforum/creer_topic [L]
+
+# Pour les pages admin
+
+RewriteRule ^acces-denied-you-have-forget-the-paths$ /All_engineering/fadmin/admin [L]
+RewriteRule ^acces-denied-you-have-sommething-to-acces-somewhere-ncneubaksbc$ /All_engineering/fadmin/article [L]
+RewriteRule ^QWggfasYtTrFPmmnbh347hHggjh-GFagtftf-AGttfhjtqqq-15552a@@@@@-qwwwe$ /All_engineering/fadmin/admin [L]
+
+# Pour le articles
+
+
+RewriteRule ^article$ /All_engineering/farticles/article [L]
+RewriteRule ^article/creer-mon-article$ /All_engineering/farticles/creer_article [L]
+RewriteRule ^article/([0-9]+)$ /All_engineering/farticles/voir_article?id=$1 [L]
+
+# pour les cours
+
+RewriteRule ^cours$ /All_engineering/learn/learn [L,NC,QSA]
+RewriteRule ^cours/([0-9]+)$ /All_engineering/learn/courses?id=$1 [L,NC,QSA]
+
+# lea admins
+
+RewriteRule ^ad$ /All_engineering/fadmin/admin [L,NC,QSA]
+RewriteRule ^creer-cours$ /All_engineering/fadmin/learn [L,NC,QSA]
+RewriteRule ^creer-lecon$ /All_engineering/fadmin/lecon [L,NC,QSA]
+
+RewriteRule ^([^\.]+)$ $1.php [L]
+ErrorDocument 401 /All_engineering/erreurs/er_400?erreur=401
+ErrorDocument 402 /All_engineering/erreurs/er_400?erreur=402
+ErrorDocument 403 /All_engineering/erreurs/er_400?erreur=403
+ErrorDocument 404 /All_engineering/erreurs/er_400?erreur=404

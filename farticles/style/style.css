@@ -1,0 +1,46 @@
+/* Listes des articles*/
+.list-articles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    margin: auto;
+}
+.list-articles div{
+    width: 300px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: 20px;
+}
+.list-articles div:hover{
+    background-color: rgb(69, 216, 221);
+    color: white;
+    cursor: pointer;
+}
+.list-articles div img{
+    width: 300px;
+    height: 250px;
+}
+.list-articles h1{
+   text-align: center;
+}
+.list-articles a{
+   text-decoration: none;
+   color: #0c0c0c;
+ }
+
+ .image-article-title{
+    border-bottom: 2px solid red;
+ }
+
+ /*Liste des catgerorie*/
+ .categorie-display{
+    width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+ }
